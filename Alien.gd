@@ -1,6 +1,6 @@
 extends Area2D
 
-export (int) var velocidad
+export var velocidad = 400
 
 func _process(delta):
 	var direccion = Vector2.ZERO
