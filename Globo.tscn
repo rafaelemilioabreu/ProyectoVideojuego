@@ -12,14 +12,14 @@ animations = [ {
 "name": "azul",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ) ],
-"loop": true,
-"name": "rojo",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 1 ) ],
 "loop": true,
 "name": "naranja",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "rojo",
 "speed": 5.0
 } ]
 
@@ -27,8 +27,10 @@ animations = [ {
 radius = 279.397
 height = 109.805
 
-[node name="Globo" type="Area2D"]
-position = Vector2( 3.57166, 0.793701 )
+[node name="Globo" type="Area2D" groups=[
+"damageable",
+]]
+position = Vector2( 3.96851, 0.793701 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
