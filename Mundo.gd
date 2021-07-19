@@ -21,12 +21,22 @@ func _on_GloboTimer_timeout():
 
 func new_game():
 	score = 10
+	$HUD.update_score(score)
+	$StartTimer.start()
+	$HUD.show_message("Get Ready...")
+	yield($StartTimer,"timeout")
 	$ScoreTimer.start()
+	$GloboTimer.start()
 	
 	
 func game_over():
 	$ScoreTimer.stop()
+
+
+func _process(delta):
 	
+	
+	pass
 	
 	
 	

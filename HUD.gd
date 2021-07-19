@@ -23,3 +23,9 @@ func _on_MessageTimer_timeout():
 	
 func show_game_over():
 	show_message("Game Over")
+	
+
+		
+	
+	
+	

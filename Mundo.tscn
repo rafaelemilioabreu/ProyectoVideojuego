@@ -23,7 +23,6 @@ rotation = 0.00313433
 
 [node name="GloboTimer" type="Timer" parent="."]
 wait_time = 0.5
-autostart = true
 
 [node name="Alien" parent="." instance=ExtResource( 3 )]
 
@@ -31,6 +30,9 @@ autostart = true
 wait_time = 10.0
 
 [node name="HUD" parent="." instance=ExtResource( 4 )]
+
+[node name="StartTimer" type="Timer" parent="."]
+one_shot = true
 
 [connection signal="timeout" from="GloboTimer" to="." method="_on_GloboTimer_timeout"]
 [connection signal="timeout" from="ScoreTimer" to="." method="_on_ScoreTimer_timeout"]
