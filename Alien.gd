@@ -2,6 +2,7 @@ extends Area2D
 
 export (PackedScene) var laser_escena
 
+signal death
 
 export var velocidad = 400
 
@@ -27,3 +28,8 @@ func _process(delta):
 	position += direccion * velocidad * delta
 	
 	
+
+
+func _on_VisibilityNotifier2D_screen_exited():
+	queue_free()
+	emit_signal("death")
