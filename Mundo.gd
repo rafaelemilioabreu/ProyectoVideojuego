@@ -31,6 +31,8 @@ func new_game():
 	
 func game_over():
 	$ScoreTimer.stop()
+	$GloboTimer.stop()
+	$HUD.show_game_over()
 
 
 func _process(delta):
