@@ -16,6 +16,7 @@ func _on_GloboTimer_timeout():
 	add_child(globo)
 	
 	globo.position = globo_spawn_locacion.position
+	globo.connect("explode",self,"addindPoints")
 	
 
 
@@ -46,5 +47,10 @@ func _process(delta):
 
 func _on_ScoreTimer_timeout():
 	score-=5
+	$HUD.update_score(score)
+	
+	
+func addindPoints():
+	score+=1
 	$HUD.update_score(score)
 	
