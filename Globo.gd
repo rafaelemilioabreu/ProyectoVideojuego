@@ -1,5 +1,6 @@
 extends Area2D
 
+signal explode
 
 var velocidad 
 
@@ -31,4 +32,5 @@ func _process(delta):
 	
 func damage ():
 	queue_free()
+	emit_signal("explode")
 	
