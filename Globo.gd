@@ -1,6 +1,7 @@
 extends Area2D
 
 signal explode
+signal blue_explode
 
 var velocidad 
 
@@ -32,5 +33,9 @@ func _process(delta):
 	
 func damage ():
 	queue_free()
-	emit_signal("explode")
+	if $AnimatedSprite.animation == "azul":
+		emit_signal("blue_explode")
+		
+	else:
+		emit_signal("explode")
 	
