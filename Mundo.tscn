@@ -37,4 +37,5 @@ one_shot = true
 [connection signal="timeout" from="GloboTimer" to="." method="_on_GloboTimer_timeout"]
 [connection signal="death" from="Alien" to="." method="game_over"]
 [connection signal="timeout" from="ScoreTimer" to="." method="_on_ScoreTimer_timeout"]
+[connection signal="score_zero" from="HUD" to="." method="game_over"]
 [connection signal="start_game" from="HUD" to="." method="new_game"]
