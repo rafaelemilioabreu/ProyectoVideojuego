@@ -46,9 +46,7 @@ func _process(delta):
 	
 
 
-func _on_ScoreTimer_timeout():
-	score-=5
-	$HUD.update_score(score)
+
 	
 	
 func addindPoints():

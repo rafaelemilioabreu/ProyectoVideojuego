@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 signal start_game
-signal score_zero
+
 
 
 func update_score(score):
@@ -26,10 +26,7 @@ func show_game_over():
 	show_message("Game Over")
 	
 
-func _process(delta):
-	if int($ScoreLabel.text) <= 0:
-		$ScoreLabel.text = str(0)
-		emit_signal("score_zero")
+
 	
 	
 	
