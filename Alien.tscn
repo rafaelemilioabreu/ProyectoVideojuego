@@ -32,7 +32,7 @@ frames = SubResource( 1 )
 shape = SubResource( 2 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
-position = Vector2( -2.24497, -2.24493 )
-scale = Vector2( 5.26537, 5.26536 )
+position = Vector2( 3.36744, -1.52588e-05 )
+scale = Vector2( 2.45921, 3.02044 )
 
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
