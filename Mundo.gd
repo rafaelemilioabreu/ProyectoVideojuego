@@ -2,7 +2,9 @@ extends Node
 
 export (PackedScene) var globo_escena
 
-var score = 10
+var score = 0
+var numero = 0
+var alien = preload("res://Alien.tscn")
 
 
 func _ready():
@@ -22,13 +24,17 @@ func _on_GloboTimer_timeout():
 
 
 func new_game():
-	score = 10
+	score = 0
+	numero = 0
+	
+	$Alien.start($StartPosition.position)
 	$HUD.update_score(score)
 	$StartTimer.start()
 	$HUD.show_message("Get Ready...")
 	yield($StartTimer,"timeout")
 	$ScoreTimer.start()
 	$GloboTimer.start()
+	numero +=1
 	
 	
 func game_over():

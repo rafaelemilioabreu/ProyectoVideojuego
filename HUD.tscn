@@ -18,7 +18,7 @@ script = ExtResource( 2 )
 margin_right = 369.0
 margin_bottom = 37.0
 custom_fonts/font = SubResource( 1 )
-text = "10"
+text = "0"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false

@@ -25,6 +25,7 @@ rotation = 0.00313433
 wait_time = 0.5
 
 [node name="Alien" parent="." instance=ExtResource( 3 )]
+position = Vector2( 883.674, 301.471 )
 
 [node name="ScoreTimer" type="Timer" parent="."]
 wait_time = 10.0
@@ -33,6 +34,9 @@ wait_time = 10.0
 
 [node name="StartTimer" type="Timer" parent="."]
 one_shot = true
+
+[node name="StartPosition" type="Position2D" parent="."]
+position = Vector2( 884.5, 300.82 )
 
 [connection signal="timeout" from="GloboTimer" to="." method="_on_GloboTimer_timeout"]
 [connection signal="death" from="Alien" to="." method="game_over"]
