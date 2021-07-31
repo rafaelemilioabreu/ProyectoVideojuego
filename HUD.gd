@@ -28,6 +28,18 @@ func show_game_over():
 	$MessageLabel2.text = "ALIEN VERSUS BALLOON"
 	$MessageLabel2.show()
 	yield(get_tree().create_timer(1.0),"timeout")
+	$Button.text = "Replay"
+	$Button.show()
+	
+	
+func show_LevelCompleted():
+	
+	
+	$MessageLabel2.text = "Level Completed"
+	$MessageLabel2.show()
+	yield(get_tree().create_timer(1.0),"timeout")
+	
+	$Button.text = "Replay"
 	$Button.show()
 	
 
