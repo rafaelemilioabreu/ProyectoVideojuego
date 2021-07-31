@@ -11,7 +11,12 @@ func _ready():
 	$AnimatedSprite.playing = true
 	var globo_tipo = $AnimatedSprite.frames.get_animation_names()
 	$AnimatedSprite.animation = globo_tipo[randi() % globo_tipo.size()]
-	velocidad = rand_range(0.5,1)
+	if $AnimatedSprite.animation == "azul":
+		velocidad = rand_range(1,2)
+	else:
+		velocidad = rand_range(0.5,1)
+	
+	
 	
 
 #eliminamos el globo de la memoria si sale de pantalla
