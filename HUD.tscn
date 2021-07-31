@@ -24,6 +24,17 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="ScreenTimerLabel" type="Label" parent="."]
+margin_left = 639.665
+margin_right = 1008.67
+margin_bottom = 37.0
+custom_fonts/font = SubResource( 1 )
+text = "0"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="MessageLabel2" type="Label" parent="."]
 anchor_left = 0.511
 anchor_top = 0.467
@@ -44,9 +55,9 @@ anchor_left = 0.5
 anchor_top = 0.544
 anchor_right = 0.504
 anchor_bottom = 0.557
-margin_left = -89.5343
+margin_left = -87.7525
 margin_top = -13.4753
-margin_right = 93.3697
+margin_right = 95.1515
 margin_bottom = 21.7247
 custom_fonts/font = SubResource( 1 )
 text = "Start"
@@ -58,5 +69,8 @@ __meta__ = {
 wait_time = 2.0
 one_shot = true
 
+[node name="ScreenTimer" type="Timer" parent="."]
+
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="timeout" from="MessageTimer" to="." method="_on_MessageTimer_timeout"]
+[connection signal="timeout" from="ScreenTimer" to="." method="_on_ScreenTimer_timeout"]
