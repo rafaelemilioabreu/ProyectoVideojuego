@@ -41,11 +41,17 @@ func game_over():
 	$ScoreTimer.stop()
 	$GloboTimer.stop()
 	$HUD.show_game_over()
-
+	
+	
+func LevelCompleted():
+	$ScoreTimer.stop()
+	$GloboTimer.stop()
+	$HUD.show_LevelCompleted()
 
 func _process(delta):
 	
-	
+	if score >= 10:
+		LevelCompleted()
 	pass
 	
 	
