@@ -4,6 +4,7 @@ export (PackedScene) var globo_escena
 
 var score = 0
 var numero = 0
+var helio = 100
 var alien = preload("res://Alien.tscn")
 
 
@@ -26,7 +27,7 @@ func _on_GloboTimer_timeout():
 func new_game():
 	score = 0
 	numero = 0
-	
+	helio = 100
 	$Alien.start($StartPosition.position)
 	$HUD.update_score(score)
 	$StartTimer.start()
@@ -34,13 +35,13 @@ func new_game():
 	yield($StartTimer,"timeout")
 	$ScoreTimer.start()
 	$GloboTimer.start()
+	$PBTimer.start()
 	numero +=1
 	
 	
 func game_over():
 	$ScoreTimer.stop()
 	$GloboTimer.stop()
-	
 	$HUD.show_game_over()
 	
 	
@@ -64,9 +65,20 @@ func _process(delta):
 	
 func addindPoints():
 	score+=1
+	helio+=0.1
+	$ProgressBar.value=helio
 	$HUD.update_score(score)
 	
 func addingBluePoints():
 	score+=10
+	helio+=10
+	$ProgressBar.value=helio
 	$HUD.update_score(score)
 	
+
+
+func _on_PBTimer_timeout():
+	helio-=0.5
+	$ProgressBar.value=helio
+	if $ProgressBar.value==0:
+		game_over()
