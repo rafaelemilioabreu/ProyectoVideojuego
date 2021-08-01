@@ -42,6 +42,7 @@ func new_game():
 func game_over():
 	$ScoreTimer.stop()
 	$GloboTimer.stop()
+	$PBTimer.stop()
 	$HUD.show_game_over()
 	
 	

@@ -15,22 +15,24 @@ font_data = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="ScoreLabel" type="Label" parent="."]
-margin_right = 369.0
-margin_bottom = 37.0
+margin_left = 4.75684
+margin_top = 7.13525
+margin_right = 373.757
+margin_bottom = 44.1353
 custom_fonts/font = SubResource( 1 )
 text = "0"
-align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ScreenTimerLabel" type="Label" parent="."]
 margin_left = 639.665
+margin_top = 16.6489
 margin_right = 1008.67
-margin_bottom = 37.0
+margin_bottom = 53.6489
 custom_fonts/font = SubResource( 1 )
 text = "0"
-align = 1
+align = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
