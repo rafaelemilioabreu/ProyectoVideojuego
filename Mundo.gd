@@ -25,6 +25,7 @@ func _on_GloboTimer_timeout():
 
 
 func new_game():
+	$Alien.show()
 	score = 0
 	numero = 0
 	helio = 100
@@ -40,6 +41,7 @@ func new_game():
 	
 	
 func game_over():
+	$Alien.hide()
 	$ScoreTimer.stop()
 	$GloboTimer.stop()
 	$PBTimer.stop()
@@ -68,7 +70,7 @@ func _process(delta):
 	
 func addindPoints():
 	score+=1
-	helio+=0.1
+	helio+=1
 	$ProgressBar.value=helio
 	$HUD.update_score(score)
 	
