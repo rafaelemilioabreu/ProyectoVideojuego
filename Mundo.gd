@@ -43,12 +43,14 @@ func game_over():
 	$ScoreTimer.stop()
 	$GloboTimer.stop()
 	$HUD.show_game_over()
+	$PBTimer.stop()
 	
 	
 func LevelCompleted():
 	$ScoreTimer.stop()
 	$GloboTimer.stop()
 	$HUD.show_LevelCompleted()
+	$PBTimer.stop()
 
 func _process(delta):
 	
