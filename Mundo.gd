@@ -84,6 +84,8 @@ func addingBluePoints():
 
 func _on_PBTimer_timeout():
 	helio-=0.5
+	if helio > 100:
+		helio = 100
 	$ProgressBar.value=helio
 	if $ProgressBar.value==0:
 		game_over()
