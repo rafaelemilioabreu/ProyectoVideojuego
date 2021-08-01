@@ -7,10 +7,13 @@ signal death
 export var velocidad = 400
 
 var plLaser = preload("res://Laser.tscn")
+var screen
+
 
 
 
 func _process(delta):
+	screen = get_viewport().size
 	var direccion = Vector2.ZERO
 	
 	if Input.is_action_pressed("ui_up"):
@@ -27,15 +30,21 @@ func _process(delta):
 
 	position += direccion * velocidad * delta
 	
+
 	
 
 
-func _on_VisibilityNotifier2D_screen_exited():
-	hide()
-	emit_signal("death")
+	
 	
 	
 func start(posicion):
 	position  = posicion
 	show()
 	
+
+
+
+func _on_Visibility3_viewport_exited(viewport):
+	hide()
+	emit_signal("death")
+	pass # Replace with function body.
